@@ -37,14 +37,16 @@ function writePassword() {
 //Password requirements 
 function getRequirements() {
 //Prompted for the length of the password. 
-passwordLength = window.prompt ("How long in characters should your password be?")
+ passwordLength = window.prompt ("How long in characters should your password be?")
 //Choose a length of at least 8 characters 
 if (passwordLength < 8) {
   alert("Please select a number more than 8.")
+  return;
 }
 //and less than 128 characters. 
 else if (passwordLength > 128) {
-  alert("Please use a number 128 or less")
+  alert("Please use a number 128 or less.")
+  return;
 }
 //Prompt to include lowercase letters. 
 var lowercase = window.confirm("Do you want lowercase letters in your password?") 
@@ -78,6 +80,12 @@ if (special.confirm === true) {
 }
 else (special === false), {
 }
+
+//Attempting to define elements confirmed???? Also need to define picked characters???
+  const hasLower = lowercase.confirm;
+  const hasUpper = uppercase.confirm;
+  const hasNumber = number.confirm;
+  const hasSpecial = special.confirm;
 
 // Generate password function 
   // Filter out the types needed for the password 
