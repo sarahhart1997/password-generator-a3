@@ -16,7 +16,7 @@ function getRandomNumber() {
 
 function getRandomSpecial() {
   const special = '!@#$%^&*(){}[]=+<>/.';
-  return special[Math.floor(Math.random() * symbols.length)];
+  return special[Math.floor(Math.random() * special.length)];
 }
 
 // Get the values needed to generate password
@@ -59,8 +59,8 @@ var lowercase = window.confirm("Do you want lowercase letters in your password?"
 if (lowercase.confirm === true) {
   hasLower
 }
-else (lower.confirm === false) {
-  lower = ("")
+else (lowercase.confirm === false) {
+  lowercase = ("")
 }
 //Prompt to include uppercase letters. 
 var uppercase = window.confirm("Do you want uppercase letters in your password?")
@@ -68,8 +68,8 @@ var uppercase = window.confirm("Do you want uppercase letters in your password?"
 if (uppercase.confirm === true) {
   hasUpper
 }
-else (upper.confirm === false) {
-  upper = ("")
+else (uppercase.confirm === false) {
+  uppercase = ("")
 }
 //Prompt to include numeric letters. 
 var number = window.confirm("Do you want to include numbers in your password?")
@@ -88,13 +88,23 @@ if (special.confirm === true) {
 }
 else (special = "")
 }
-//Random function to generate password. 
 
 // Generate password function 
   // Filter out the types needed for the password 
-  
+  if(hasUpper) {
+    pickedCharacters += getRandomUpper
+  }
+  if(hasLower) {
+    pickedCharacters += getRandomLower
+  }
+  if(hasNumber) {
+    pickedCharacters += getRandomNumber
+  }
+  if(hasSpecial) {
+    pickedCharacters += getRandomSpecial
+  }
   // Loop over the length for each type until reached password length 
-for ()
+  
 // Combine the variety count in the password
 const varietyCount = lower + upper + number + symbol; 
 
