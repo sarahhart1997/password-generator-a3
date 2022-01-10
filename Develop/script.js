@@ -21,17 +21,25 @@ function getRandomSpecial() {
 
 // Get the values needed to generate password
 generateBtn.addEventListener('click', () -> {
-  const passwordLength = passwordLength.value;
-  const hasLower = lower.confirm
+  const passwordLength = passwordLength.value,
+  const hasLower = lower.confirm,
+  const hasUpper = upper.confirm,
+  const hasSpecial = special.confirm, 
+  const hasNumber = number.confirm,
 });
 
 // Generate password function 
   // Filter out the types needed for the password 
-  // Loop over the length for each type
+  
+  // Loop over the length for each type until reached password length 
 
 // Combine the variety count in the password
 const varietyCount = lower + upper + number + symbol; 
 
+// if count is zero return nothing in generate password. 
+if (varietyCount < 1) {
+  generatePassword = ("");
+}
 
   // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -45,6 +53,8 @@ function writePassword() {
 
 }
 //Connect the html button to Javascript 
+
+//Password requirements 
 
 
 //Prompted for the length of the password. 
@@ -60,19 +70,27 @@ else if (passwordLength > 128) {
 //Prompt to include lowercase letters. 
 var lowercase = window.confirm("Do you want lowercase letters in your password?") 
 // Confirm yes or no to lowercase letters. 
-
+if (lowercase.confirm === true) {
+  hasLower
+}
 //Prompt to include uppercase letters. 
 var uppercase = window.confirm("Do you want uppercase letters in your password?")
 //Confirm yes or no to uppercase letters. 
-
+if (uppercase.confirm === true) {
+  hasUpper
+}
 //Prompt to include numeric letters. 
 var number = window.confirm("Do you want to include numbers in your password?")
 //Confirm yes or no to include numeric letters. 
-
+if (number.confirm === true) {
+  hasNumber
+}
 //Prompt to include special characters 
 var special = window.confirm("Do you want to include special characters in your password?")
 //Confirm yes or no to include special characters. 
-
+if (special.confirm === true) {
+  hasSpecial
+}
 //Random function to generate password. 
 
 //Display password on the website. 
