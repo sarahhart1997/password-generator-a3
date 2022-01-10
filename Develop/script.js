@@ -20,12 +20,8 @@ function getRandomSpecial() {
 }
 
 // Get the values needed to generate password
-generateBtn.addEventListener('click', () -> {
-  passwordLength = passwordLength.value,
-  hasLower = lower.confirm,
-  hasUpper = upper.confirm,
-  hasSpecial = special.confirm, 
-  hasNumber = number.confirm,
+generateBtn.addEventListener('click', {
+  getRequirements()
 });
 
   // Get references to the #generate element
@@ -104,9 +100,12 @@ else (special = "")
     pickedCharacters += getRandomSpecial
   }
   // Loop over the length for each type until reached password length 
-  
-// Combine the variety count in the password
-const varietyCount = lower + upper + number + symbol; 
+  for (var i=0; i < length; i++) {
+    //determine why we do the variables above in ()
+
+  }
+// Combine the variety count in the password to determine correct values are chosen.
+const varietyCount = hasLower + hasNumber + hasSpecial + hasUpper
 
 // if count is zero return nothing in generate password. 
 if (varietyCount < 1) {
