@@ -21,25 +21,12 @@ function getRandomSpecial() {
 
 // Get the values needed to generate password
 generateBtn.addEventListener('click', () -> {
-  const passwordLength = passwordLength.value,
-  const hasLower = lower.confirm,
-  const hasUpper = upper.confirm,
-  const hasSpecial = special.confirm, 
-  const hasNumber = number.confirm,
+  passwordLength = passwordLength.value,
+  hasLower = lower.confirm,
+  hasUpper = upper.confirm,
+  hasSpecial = special.confirm, 
+  hasNumber = number.confirm,
 });
-
-// Generate password function 
-  // Filter out the types needed for the password 
-  
-  // Loop over the length for each type until reached password length 
-
-// Combine the variety count in the password
-const varietyCount = lower + upper + number + symbol; 
-
-// if count is zero return nothing in generate password. 
-if (varietyCount < 1) {
-  generatePassword = ("");
-}
 
   // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -55,8 +42,7 @@ function writePassword() {
 //Connect the html button to Javascript 
 
 //Password requirements 
-
-
+function getRequirements() {
 //Prompted for the length of the password. 
 passwordLength = window.prompt ("How long in characters should your password be?")
 //Choose a length of at least 8 characters 
@@ -73,11 +59,17 @@ var lowercase = window.confirm("Do you want lowercase letters in your password?"
 if (lowercase.confirm === true) {
   hasLower
 }
+else (lower.confirm === false) {
+  lower = ("")
+}
 //Prompt to include uppercase letters. 
 var uppercase = window.confirm("Do you want uppercase letters in your password?")
 //Confirm yes or no to uppercase letters. 
 if (uppercase.confirm === true) {
   hasUpper
+}
+else (upper.confirm === false) {
+  upper = ("")
 }
 //Prompt to include numeric letters. 
 var number = window.confirm("Do you want to include numbers in your password?")
@@ -85,12 +77,31 @@ var number = window.confirm("Do you want to include numbers in your password?")
 if (number.confirm === true) {
   hasNumber
 }
+else (number.confirm === false) {
+  number = ("")
+}
 //Prompt to include special characters 
 var special = window.confirm("Do you want to include special characters in your password?")
 //Confirm yes or no to include special characters. 
 if (special.confirm === true) {
   hasSpecial
 }
+else (special = "")
+}
 //Random function to generate password. 
 
+// Generate password function 
+  // Filter out the types needed for the password 
+  
+  // Loop over the length for each type until reached password length 
+for ()
+// Combine the variety count in the password
+const varietyCount = lower + upper + number + symbol; 
+
+// if count is zero return nothing in generate password. 
+if (varietyCount < 1) {
+  generatePassword = ("");
+}
 //Display password on the website. 
+
+getRequirements();
