@@ -51,36 +51,44 @@ else if (passwordLength > 128) {
 //Prompt to include lowercase letters. 
 var lowercase = window.confirm("Do you want lowercase letters in your password?") 
 // Confirm yes or no to lowercase letters. 
-if (lowercase.confirm === true) {
-  hasLower
-}
-else (lowercase === false), {
-}
+// if (lowercase.confirm === true) {
+//   hasLower
+// }
+// else (lowercase === false), {
+// }
 //Prompt to include uppercase letters. 
 var uppercase = window.confirm("Do you want uppercase letters in your password?")
 //Confirm yes or no to uppercase letters. 
-if (uppercase.confirm === true) {
-  hasUpper
-}
-else (uppercase === false), {
-}
+// if (uppercase.confirm === true) {
+//   console.log (hasUpper)
+// }
+// else (uppercase === false), {
+// }
 //Prompt to include numeric letters. 
 var number = window.confirm("Do you want to include numbers in your password?")
 //Confirm yes or no to include numeric letters. 
-if (number.confirm === true) {
-  hasNumber
-}
-else (number === false), {
-}
+// if (number.confirm === true) {
+//   console.log (hasNumber)
+// }
+// else (number === false), {
+// }
 //Prompt to include special characters 
 var special = window.confirm("Do you want to include special characters in your password?")
 //Confirm yes or no to include special characters. 
-if (special.confirm === true) {
-  hasSpecial
-}
-else (special === false), {
+// if (special.confirm === true) {
+//   hasSpecial
+// }
+// else (special === false), {
+// }
+
+//Check to see if user can generate a password
+if (lowercase === false && uppercase === false && number === false && special === false){
+  alert('You must select a value in order in proceed')
+  return;
 }
 
+//
+if (uppercase === true && lowercase === false && number === false && special === false)
 //Attempting to define elements confirmed???? Also need to define picked characters???
   const hasLower = lowercase.confirm;
   const hasUpper = uppercase.confirm;
