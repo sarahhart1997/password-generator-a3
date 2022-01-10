@@ -102,7 +102,7 @@ else (special = "")
   // Loop over the length for each type until reached password length 
   for (var i=0; i < length; i++) {
     //determine why we do the variables above in ()
-
+    result = (pickedCharacters.length * passwordLength)
   }
 // Combine the variety count in the password to determine correct values are chosen.
 const varietyCount = hasLower + hasNumber + hasSpecial + hasUpper
