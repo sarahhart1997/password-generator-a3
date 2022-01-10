@@ -1,6 +1,5 @@
 //Base items to be declared for use later
 
-
 // Functions to make letters/numbers using charcode
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -19,23 +18,21 @@ function getRandomSpecial() {
   return special[Math.floor(Math.random() * special.length)];
 }
 
-// Get the values needed to generate password
-generateBtn.addEventListener('click', {
+//Making the button have windows appear
+var generateBtn = document.querySelector("generate");
+generate.onclick = function() {
   getRequirements()
-});
-
-  // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+}
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
-//Connect the html button to Javascript 
+// Get the values needed to generate password
+// generateBtn.addEventListener("click", writePassword);
 
 //Password requirements 
 function getRequirements() {
@@ -55,8 +52,7 @@ var lowercase = window.confirm("Do you want lowercase letters in your password?"
 if (lowercase.confirm === true) {
   hasLower
 }
-else (lowercase.confirm === false) {
-  lowercase = ("")
+else (lowercase === false), {
 }
 //Prompt to include uppercase letters. 
 var uppercase = window.confirm("Do you want uppercase letters in your password?")
@@ -64,8 +60,7 @@ var uppercase = window.confirm("Do you want uppercase letters in your password?"
 if (uppercase.confirm === true) {
   hasUpper
 }
-else (uppercase.confirm === false) {
-  uppercase = ("")
+else (uppercase === false), {
 }
 //Prompt to include numeric letters. 
 var number = window.confirm("Do you want to include numbers in your password?")
@@ -73,8 +68,7 @@ var number = window.confirm("Do you want to include numbers in your password?")
 if (number.confirm === true) {
   hasNumber
 }
-else (number.confirm === false) {
-  number = ("")
+else (number === false), {
 }
 //Prompt to include special characters 
 var special = window.confirm("Do you want to include special characters in your password?")
@@ -82,7 +76,7 @@ var special = window.confirm("Do you want to include special characters in your 
 if (special.confirm === true) {
   hasSpecial
 }
-else (special = "")
+else (special === false), {
 }
 
 // Generate password function 
@@ -100,17 +94,19 @@ else (special = "")
     pickedCharacters += getRandomSpecial
   }
   // Loop over the length for each type until reached password length 
-  for (var i=0; i < length; i++) {
+  for (var i = 0; i < passwordLength; i++) {
     //determine why we do the variables above in ()
-    result = (pickedCharacters.length * passwordLength)
+    generatePassword = pickedCharacters.length * passwordLength
   }
+
+  // how to make the number stop at passwordLength and not endlessly loop forever????
+
 // Combine the variety count in the password to determine correct values are chosen.
 const varietyCount = hasLower + hasNumber + hasSpecial + hasUpper
 
 // if count is zero return nothing in generate password. 
 if (varietyCount < 1) {
-  generatePassword = ("");
+  generatePassword = ("You must select at least 1 value.");
+}
 }
 //Display password on the website. 
-
-getRequirements();
